@@ -39,9 +39,9 @@ public class validation extends HttpServlet {
                     //Create object for model
                     register data = new register();                  
                     data.setFirstname(fname);
-                    data.setFirstname(lname);
-                    data.setFirstname(user);
-                    data.setFirstname(pass1);                   
+                    data.setLastname(lname);
+                    data.setUsername(user);
+                    data.setPassword(pass1);                   
                    
                     //create object for dboperation
                     dboperation obj = new dboperation();
