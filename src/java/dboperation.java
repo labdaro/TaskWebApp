@@ -53,6 +53,7 @@ public class dboperation {
         return true;
     }
     
+    // ah ng trov
     //Operation of ViewSingleRecord 
    public ResultSet viewSingleRecord(int id) throws ClassNotFoundException, SQLException{
             getConnection();
