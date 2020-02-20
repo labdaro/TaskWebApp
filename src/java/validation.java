@@ -51,12 +51,13 @@ public class validation extends HttpServlet {
                         d.forward(request, response);                     
                     }
                     
-                    if(obj.insertRegisterFrom(data)){                     
-                    request.setAttribute("fullname", fullname);
-//                    d = request.getRequestDispatcher("viewSingleRecord.jsp");
-//                    d.forward(request, response);
+                    if(obj.insertRegisterFrom(data)){ 
+                        System.out.println("Insert is ok......");
+                        response.sendRedirect("viewrecord.jsp");
                     
-                    }                        
+                    }
+                    
+                                           
                 } catch (ClassNotFoundException | SQLException ex) {
                     Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);
                 }

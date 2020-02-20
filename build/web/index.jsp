@@ -18,8 +18,8 @@
             Lastname:   <input type="text" name="lastname"> <br>
             Username:   <input type="text" name="user"> <br> 
            
-            Password: <input type="text" name="pass1"> <br>
-            Confirm-password <input type="text" name ="pass2"> <br>
+            Password: <input type="password" name="pass1"> <br>
+            Confirm-password <input type="password" name ="pass2"> <br>
                     
             <input type="submit" value="register">
      

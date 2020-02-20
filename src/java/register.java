@@ -1,4 +1,4 @@
-public class register {
+    public class register {
     
     private String firstname;
     private String lastname;
