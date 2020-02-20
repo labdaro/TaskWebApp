@@ -8,6 +8,18 @@
         <servlet-name>viewallrecord</servlet-name>
         <servlet-class>viewallrecord</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>validate</servlet-name>
+        <servlet-class>validate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>validation</servlet-name>
+        <servlet-class>validation</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>viewSingleRecord</servlet-name>
+        <servlet-class>viewSingleRecord</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>register</servlet-name>
         <url-pattern>/register</url-pattern>
@@ -15,6 +27,18 @@
     <servlet-mapping>
         <servlet-name>viewallrecord</servlet-name>
         <url-pattern>/viewallrecord</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>validate</servlet-name>
+        <url-pattern>/validate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>validation</servlet-name>
+        <url-pattern>/validation</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>viewSingleRecord</servlet-name>
+        <url-pattern>/viewSingleRecord</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

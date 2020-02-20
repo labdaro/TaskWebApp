@@ -24,22 +24,15 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Daro
  */
-public class viewallrecord extends HttpServlet {
+public class viewSingleRecord extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-      try {               
-                     Class.forName("com.mysql.jdbc.Driver");
-                     String url = "jdbc:mysql://localhost:3306/report";
-                     String userdb = "root";
-                     Connection con = DriverManager.getConnection(url, userdb, "");
-                     Statement s = con.createStatement();
-                    
-                    ResultSet result = s.executeQuery("select * from employee");
-                    req.setAttribute("check", "Get the data already.....");
-                    req.setAttribute("st", result);
-                    
-                    System.out.println(result);
+      try {       
+                   
+           dboperation obj = new dboperation();
+           ResultSet showAll = obj.viewSingleRecord(13);
+           req.setAttribute("showAll", showAll);
                                      
 
           

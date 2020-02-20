@@ -12,7 +12,7 @@
     </head>
     <body>
         <h1>Hello World!</h1>
-        <form action="register" method="post">
+        <form action="validation" method="post">
             
             Firstname:   <input type="text" name="firstname"> <br>
             Lastname:   <input type="text" name="lastname"> <br>
@@ -25,6 +25,12 @@
      
         
         </form>
+         <%  
+            String show1 = (String) request.getAttribute("sameuser");
+            if (show1 != null){
+                out.print(show1);
+            }
+          %> 
             <%  
             String show = (String) request.getAttribute("error");
             if (show != null){
