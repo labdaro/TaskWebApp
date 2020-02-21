@@ -3,9 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Daro/Documents/NetBeansProjects/report/src/java/dboperation.java</file>
-            <file>file:/C:/Users/Daro/Documents/NetBeansProjects/report/src/java/validation.java</file>
-            <file>file:/C:/Users/Daro/Documents/NetBeansProjects/report/web/index.jsp</file>
+            <file>file:/C:/Users/Daro/Documents/NetBeansProjects/TaskWebApp/src/java/validation.java</file>
+            <file>file:/C:/Users/Daro/Documents/NetBeansProjects/TaskWebApp/web/index.jsp</file>
+            <file>file:/C:/Users/Daro/Documents/NetBeansProjects/TaskWebApp/web/WEB-INF/deleteRecord.jsp</file>
+            <file>file:/C:/Users/Daro/Documents/NetBeansProjects/TaskWebApp/src/java/delete.java</file>
+            <file>file:/C:/Users/Daro/Documents/NetBeansProjects/TaskWebApp/src/java/dboperation.java</file>
+            <file>file:/C:/Users/Daro/Documents/NetBeansProjects/TaskWebApp/web/viewrecord.jsp</file>
+            <file>file:/C:/Users/Daro/Documents/NetBeansProjects/TaskWebApp/src/java/viewSingle.java</file>
         </group>
     </open-files>
 </project-private>

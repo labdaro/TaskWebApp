@@ -10,13 +10,20 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <style>
+            
+            .empty{
+                color: red;
+            }
+        </style>
     </head>
     <body>
         <h1>Hello World! View Record</h1>
-        <form action="viewrecord" method="post">
+        <form action="viewSingle" method="post">
             <input type="text" name="searchId">
             <input type="submit" value="Search">
         </form>
+        <p class="empty">${error}</p> 
         
     </body>
 </html>

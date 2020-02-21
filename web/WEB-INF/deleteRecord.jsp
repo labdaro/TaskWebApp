@@ -1,7 +1,7 @@
 <%-- 
-    Document   : home
-    Created on : Feb 20, 2020, 3:10:21 PM
-    Author     : Sotherny
+    Document   : deleteRecord
+    Created on : Feb 21, 2020, 12:49:26 AM
+    Author     : Daro
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
