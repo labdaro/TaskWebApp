@@ -10,5 +10,12 @@
     - attributes in employee:
         + id       varchar(200)
         + name     varchar(200)
+<<<<<<< HEAD
         + age      varchar(200)
         + country  varchar(200)
+=======
+        + country  varchar(200)
+
+
+        = === ==== =============================
+>>>>>>> b6a03970c0fe8a7c5b99c98af5042aa9dcf8b972
