@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.LinkedList;
 
 
 public class dboperation { 
@@ -38,8 +39,10 @@ public class dboperation {
        String sql = String.format("select username from register where username ='%s'",user );
        System.out.println(sql);
        ResultSet checkuser = s.executeQuery(sql);
+        System.out.println("============================================================");
        System.out.println(checkuser.next());
        if(checkuser.next() == true  ){
+           System.out.println("name is alread have ");
             return true;
         }
        return flag;
@@ -53,14 +56,24 @@ public class dboperation {
         return true;
     }
     
-    // ah ng trov
     //Operation of ViewSingleRecord 
-   public ResultSet viewSingleRecord(int id) throws ClassNotFoundException, SQLException{
+   public LinkedList viewSingleRecord(String checkId) throws ClassNotFoundException, SQLException{
             getConnection();
+            LinkedList<String> list=new LinkedList<String>();         
             Statement s = con.createStatement();
-            ResultSet showAllRecord = s.executeQuery("select * from employee");
+            String sql = String.format("select * from employee where id ='%s'",checkId);
+            System.out.println(sql);
+            ResultSet showSingleRecord = s.executeQuery(sql);
+            
+            System.out.println("get data already from database.........");
+            while(showSingleRecord.next()){
+                String id = showSingleRecord.getString("id");
+                String name = showSingleRecord.getString("name");
+                list.add(id);
+                list.add(name);
+            }
            
-        return showAllRecord;
+        return list;
     }
    
 }

@@ -28,39 +28,35 @@ public class validation extends HttpServlet {
          String fname = request.getParameter("firstname");
          String lname = request.getParameter("lastname");
          String fullname = fname + lname;
-         
-         
-        
-       
-            
-        if (pass1.equals(pass2)){
-            if (pass1.length() > 8){
-                try {  
-                    //Create object for model
-                    register data = new register();                  
-                    data.setFirstname(fname);
-                    data.setLastname(lname);
-                    data.setUsername(user);
-                    data.setPassword(pass1);                   
-                   
-                    //create object for dboperation
-                    dboperation obj = new dboperation();
-                    if (obj.validateUsername(user)== true){
-                        request.setAttribute("sameuser", "user is already existing ....");
-                        d = request.getRequestDispatcher("index.jsp");
-                        d.forward(request, response);                     
+        if (user.matches("[a-zA-Z]+") && user.length() >6){
+            if (pass1.equals(pass2)){
+                if (pass1.length() > 8){
+                    try {  
+                        //Create object for model
+                        register data = new register();                  
+                        data.setFirstname(fname);
+                        data.setLastname(lname);
+                        data.setUsername(user);
+                        data.setPassword(pass1);                   
+
+                        //create object for dboperation
+                        dboperation obj = new dboperation();
+                        if (obj.validateUsername(user)== true){
+                            request.setAttribute("sameuser", "user is already existing ....");
+                            d = request.getRequestDispatcher("index.jsp");
+                            d.forward(request, response);                     
+                        }
+
+                        else if(obj.insertRegisterFrom(data)){ 
+                            System.out.println("Insert is ok......");
+                            response.sendRedirect("viewrecord.jsp");
+
+                        }
+
+
+                    } catch (ClassNotFoundException | SQLException ex) {
+                        Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                    
-                    if(obj.insertRegisterFrom(data)){ 
-                        System.out.println("Insert is ok......");
-                        response.sendRedirect("viewrecord.jsp");
-                    
-                    }
-                    
-                                           
-                } catch (ClassNotFoundException | SQLException ex) {
-                    Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);
-                }
                   
             }
             else{
@@ -78,6 +74,13 @@ public class validation extends HttpServlet {
             d = request.getRequestDispatcher("index.jsp");
             d.forward(request, response);
         }
+          
+        }else{
+            request.setAttribute("error", "You must be all character and hava length more 6 digit....");
+            d = request.getRequestDispatcher("index.jsp");
+            d.forward(request, response);
+        }        
+        
        
     }
 }

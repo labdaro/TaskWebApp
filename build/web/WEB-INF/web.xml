@@ -20,6 +20,14 @@
         <servlet-name>viewSingleRecord</servlet-name>
         <servlet-class>viewSingleRecord</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>viewSingle</servlet-name>
+        <servlet-class>viewSingle</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>delete</servlet-name>
+        <servlet-class>delete</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>register</servlet-name>
         <url-pattern>/register</url-pattern>
@@ -39,6 +47,14 @@
     <servlet-mapping>
         <servlet-name>viewSingleRecord</servlet-name>
         <url-pattern>/viewSingleRecord</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>viewSingle</servlet-name>
+        <url-pattern>/viewSingle</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>delete</servlet-name>
+        <url-pattern>/delete</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
