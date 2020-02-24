@@ -1,5 +1,6 @@
 
 
+import table.dboperation;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -51,12 +52,12 @@ public class validation extends HttpServlet {
                         d.forward(request, response);                     
                     }
                     
-                    if(obj.insertRegisterFrom(data)){ 
-                        System.out.println("Insert is ok......");
-                        response.sendRedirect("viewrecord.jsp");
-                    
-                    }
-                    
+//                    if(obj.insertRegisterFrom(data)){ 
+//                        System.out.println("Insert is ok......");
+//                        response.sendRedirect("home.jsp");
+//                    
+//                    }
+//                    
                                            
                 } catch (ClassNotFoundException | SQLException ex) {
                     Logger.getLogger(register.class.getName()).log(Level.SEVERE, null, ex);

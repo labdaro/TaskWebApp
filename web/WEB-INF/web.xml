@@ -20,6 +20,18 @@
         <servlet-name>viewSingleRecord</servlet-name>
         <servlet-class>viewSingleRecord</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>loginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>logoutServlet</servlet-name>
+        <servlet-class>logoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewAllServlet</servlet-name>
+        <servlet-class>ViewAllServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>register</servlet-name>
         <url-pattern>/register</url-pattern>
@@ -40,12 +52,33 @@
         <servlet-name>viewSingleRecord</servlet-name>
         <url-pattern>/viewSingleRecord</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>logoutServlet</servlet-name>
+        <url-pattern>/logoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewAllServlet</servlet-name>
+        <url-pattern>/ViewAllServlet</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>login.jsp</welcome-file>
     </welcome-file-list>
+<!--    <filter>
+        <filter-name>filterLogin</filter-name>
+        <filter-class>filterLogin</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>filterLogin</filter-name>
+        <url-pattern>/loginServlet</url-pattern>
+        <url-pattern>/login.jsp</url-pattern>
+    </filter-mapping>-->
 </web-app>
